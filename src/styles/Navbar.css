@@ -1,0 +1,124 @@
+/* Style de base pour la navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C3E50; /* Couleur plus élégante */
+  padding: 10px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo de la navbar */
+.navbar-logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif; /* Police moderne */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo a:hover{
+  color: #21c900;
+}
+
+.navbar-logo img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 20%;
+}
+
+/* Liste de liens */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+/* Liens hypertexte */
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #4CAF50;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-links a:hover {
+  color: #4CAF50; /* Ajout d'une couleur au survol */
+}
+
+/* Bouton de déconnexion */
+.logout-button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+  background-color: #000222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar-logo {
+    margin-bottom: 15px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-links a {
+    font-size: 18px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+}
