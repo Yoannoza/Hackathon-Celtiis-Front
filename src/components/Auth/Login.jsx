@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../utils/actions";
+import { useNavigate } from 'react-router-dom';
 import "../../styles/Login.css"; // Exemple pour CSS Modules ou styles personnalisés
 
 const Login = () => {
@@ -10,6 +11,8 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,7 +31,7 @@ const Login = () => {
       navigate("/dashboard");
     } catch (err) {
       console.error("Erreur lors de la connexion", err);
-      setError("Nom d'utilisateur ou mot de passe incorrect.");
+      setErrorMessage("Nom d'utilisateur ou mot de passe incorrect.");
     }
   };
 

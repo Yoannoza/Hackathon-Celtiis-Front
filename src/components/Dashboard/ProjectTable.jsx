@@ -14,7 +14,7 @@ const ProjectTable = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/projects/")
+      .get("https://7d30-41-138-89-233.ngrok-free.app/api/projects/")
       .then((response) => setProjects(response.data))
       .catch((error) =>
         toast.error("Erreur de récupération des projets", { position: "top-right" })
@@ -79,12 +79,12 @@ const ProjectTable = () => {
       .then(() => {
         toast.success("Vote enregistré avec succès !", { position: "top-right" });
 
-        // Marque le projet comme soumis
-        setSubmittedProjects((prevSubmitted) => {
-          const updatedSubmitted = [...prevSubmitted, projectId];
-          localStorage.setItem("submittedProjects", JSON.stringify(updatedSubmitted));
-          return updatedSubmitted;
-        });
+        // // Marque le projet comme soumis
+        // setSubmittedProjects((prevSubmitted) => {
+        //   const updatedSubmitted = [...prevSubmitted, projectId];
+        //   localStorage.setItem("submittedProjects", JSON.stringify(updatedSubmitted));
+        //   return updatedSubmitted;
+        // });
       })
       .catch((error) => {
         const errorMessage = error.response?.data?.detail || "Vous avez déjà voté !";
