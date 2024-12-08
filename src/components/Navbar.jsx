@@ -13,7 +13,7 @@ const Navbar = () => {
       if (!token) return;
 
       try {
-        const response = await fetch("http://your-backend-domain/api/user-info/", {
+        const response = await fetch("https://hackathon-celtiis-back-production.up.railway.app/api/user-info/", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
