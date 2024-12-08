@@ -79,12 +79,12 @@ const ProjectTable = () => {
       .then(() => {
         toast.success("Vote enregistré avec succès !", { position: "top-right" });
 
-        // // Marque le projet comme soumis
-        // setSubmittedProjects((prevSubmitted) => {
-        //   const updatedSubmitted = [...prevSubmitted, projectId];
-        //   localStorage.setItem("submittedProjects", JSON.stringify(updatedSubmitted));
-        //   return updatedSubmitted;
-        // });
+        // Marque le projet comme soumis
+        setSubmittedProjects((prevSubmitted) => {
+          const updatedSubmitted = [...prevSubmitted, projectId];
+          localStorage.setItem("submittedProjects", JSON.stringify(updatedSubmitted));
+          return updatedSubmitted;
+        });
       })
       .catch((error) => {
         const errorMessage = error.response?.data?.detail || "Vous avez déjà voté !";
