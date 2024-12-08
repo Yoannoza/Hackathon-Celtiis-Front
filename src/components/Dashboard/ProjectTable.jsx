@@ -68,7 +68,7 @@ const ProjectTable = () => {
 
     axios
       .post(
-        "http://127.0.0.1:8000/api/votes/",
+        "https://hackathon-celtiis-back-production.up.railway.app/api/votes/",
         { project: projectId, ...vote },
         {
           headers: {
