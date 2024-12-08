@@ -141,10 +141,10 @@ const ProjectTable = () => {
       <table className="project-table">
         <thead>
           <tr>
-            <th>Equipe  <br /> (sur 10)</th>
+            <th>Equipe</th>
             <th>Projet  <br /> ( sur 10 )</th>
             <th>Fonctionnalités  <br /> ( sur 10 )</th>
-            <th>Outils Spécifiques  <br /> ( sur 5 )</th>
+            <th>Outils Spécifiques  <br /> ( sur 10 )</th>
             <th>UX/UI  <br /> (sur 5)</th>
             <th>Originalité  <br /> ( sur 5 )</th>
             <th>Faisabilité Technique  <br /> ( sur 5 )</th>
