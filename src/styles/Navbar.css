@@ -76,22 +76,51 @@
   color: #4CAF50; /* Ajout d'une couleur au survol */
 }
 
-/* Bouton de déconnexion */
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajoute un espacement entre les éléments */
+}
+
+.user-icon {
+  font-size: 1.8em; /* Ajuste la taille de l'icône */
+  color: white; /* Couleur de l'icône */
+}
+
+
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-username {
+  font-size: 1em;
+}
+
 .logout-button {
-  background-color: #000000;
-  color: #fff;
+  padding: 5px 10px;
+  background-color: #e74c3c;
   border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logout-button:hover {
-  background-color: #000222;
+  background-color: #c0392b;
 }
+
+.navbar-auth-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+.navbar-auth-links a:hover {
+  text-decoration: underline;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
