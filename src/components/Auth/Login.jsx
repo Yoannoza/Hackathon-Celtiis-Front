@@ -19,7 +19,7 @@ const Login = () => {
     setIsLoading(true);
     setErrorMessage("");
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/auth/login/", {
+      const response = await axios.post("https://hackathon-celtiis-back-production.up.railway.app/api/auth/login/", {
         username,
         password,
       });

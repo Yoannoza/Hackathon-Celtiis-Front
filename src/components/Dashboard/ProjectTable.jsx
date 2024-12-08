@@ -14,7 +14,7 @@ const ProjectTable = () => {
 
   useEffect(() => {
     axios
-      .get("https://7d30-41-138-89-233.ngrok-free.app/api/projects/")
+      .get("https://hackathon-celtiis-back-production.up.railway.app/api/projects/")
       .then((response) => setProjects(response.data))
       .catch((error) =>
         toast.error("Erreur de récupération des projets", { position: "top-right" })

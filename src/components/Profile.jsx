@@ -7,7 +7,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/api/profile/", {
+        const response = await axios.get("https://hackathon-celtiis-back-production.up.railway.app//api/profile/", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("jwt")}`,
           },

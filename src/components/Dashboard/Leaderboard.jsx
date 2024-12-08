@@ -8,7 +8,7 @@ const Leaderboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/ranking/")
+      .get("https://hackathon-celtiis-back-production.up.railway.app/api/ranking/")
       .then((response) => {
         setRankings(response.data);
 

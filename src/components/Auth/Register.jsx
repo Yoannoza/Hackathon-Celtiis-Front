@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/auth/register/", {
+      const response = await axios.post("https://hackathon-celtiis-back-production.up.railway.app/api/auth/register/", {
         username,
         password,
       });
